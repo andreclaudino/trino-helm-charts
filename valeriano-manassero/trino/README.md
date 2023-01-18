@@ -54,6 +54,12 @@ High performance, distributed SQL query engine for big data
 | config.general.query.maxMemory | string | `"3GB"` |  |
 | config.general.query.maxMemoryPerNode | string | `"1GB"` |  |
 | config.general.query.maxTotalMemory | string | `"6GB"` |  |
+| config.general.faultTolerance.retryPolicy				|	 string | "TASK" | | |
+| config.general.faultTolerance.spillEnabled			|	 bool | `true` | | |
+| config.general.faultTolerance.spillerSpillPath	|	 string | "/tmp/spillerSpillPath" | | |
+| config.general.faultTolerance.maxSpillPerNode	|	 string | "100GB" | | |
+| config.general.faultTolerance.queryMaxSpillPerNode	|	 string | "100GB" | | |
+| config.general.faultTolerance.spillCompressionEnabled	|	 bool | `true` | | |
 | config.worker.affinity | object | `{}` |  |
 | config.worker.autoscaler.enabled | bool | `false` |  |
 | config.worker.autoscaler.maxReplicas | int | `5` |  |

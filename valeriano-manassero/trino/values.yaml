@@ -57,7 +57,7 @@ config:
       retryPolicy: TASK
       spillEnabled: true
       spillerSpillPath: /tmp/spillerSpillPath
-      maxSpillPerNode: 800GB
+      maxSpillPerNode: 100GB
       queryMaxSpillPerNode: 100GB
       spillCompressionEnabled: true
 
