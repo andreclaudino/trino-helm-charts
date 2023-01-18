@@ -7,10 +7,13 @@ home: https://trino.io
 icon: https://trino.io/assets/images/trino-logo/trino-ko_tiny-alt.svg
 sources:
   - https://github.com/valeriano-manassero/helm-charts
+  - https://github.com/andreclaudino/helm-charts
   - https://github.com/trinodb/trino
 maintainers:
   - name: valeriano-manassero
     url: https://github.com/valeriano-manassero
+  - name: andreclaudino
+    url: https://github.com/andreclaudino
 keywords:
   - trino
   - trinosql

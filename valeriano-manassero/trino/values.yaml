@@ -1,6 +1,6 @@
 image:
-  repository: trinodb/trino
-  tag: 380
+  repository: andreclaudino/trino
+  tag: 405-0.0.2
   pullPolicy: IfNotPresent
   securityContext:
     runAsUser: 1000
@@ -53,6 +53,13 @@ config:
       maxMemoryPerNode: "1GB"
       maxTotalMemory: "6GB"
     prestoCompatibleHeader: false
+    faultTolerance:
+      retryPolicy: TASK
+      spillEnabled: true
+      spillerSpillPath: /tmp/spillerSpillPath
+      maxSpillPerNode: 800GB
+      queryMaxSpillPerNode: 100GB
+      spillCompressionEnabled: true
 
   coordinator:
     replicas: 1

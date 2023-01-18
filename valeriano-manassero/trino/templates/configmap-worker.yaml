@@ -31,6 +31,14 @@ data:
     query.max-memory-per-node={{ .Values.config.general.query.maxMemoryPerNode }}
     query.max-total-memory={{ .Values.config.general.query.maxTotalMemory }}
     discovery.uri=http://{{ template "trino.fullname" . }}:{{ .Values.config.general.http.port }}
+
+    retry-policy={{ .Values.config.general.faultTolerance.retryPolicy }}
+    spill-enabled={{ .Values.config.general.faultTolerance.spillEnabled }}
+    spiller-spill-path={{ .Values.config.general.faultTolerance.spillerSpillPath }}
+    max-spill-per-node={{ .Values.config.general.faultTolerance.maxSpillPerNode }}
+    query-max-spill-per-node={{ .Values.config.general.faultTolerance.queryMaxSpillPerNode }}
+    spill-compression-enabled={{ .Values.config.general.faultTolerance.spillCompressionEnabled }}
+
 {{- if .Values.config.general.prestoCompatibleHeader }}
     protocol.v1.alternate-header-name=Presto
 {{- end }}
