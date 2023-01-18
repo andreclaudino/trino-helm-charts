@@ -52,6 +52,13 @@ data:
 {{- if .Values.config.general.internalCommunicationSharedSecret }}
     internal-communication.shared-secret={{ .Values.config.general.internalCommunicationSharedSecret }}
 {{- end }}
+
+    retry-policy={{ .Values.config.general.faultTolerance.retryPolicy }}
+    spill-enabled={{ .Values.config.general.faultTolerance.spillEnabled }}
+    spiller-spill-path={{ .Values.config.general.faultTolerance.spillerSpillPath }}
+    max-spill-per-node={{ .Values.config.general.faultTolerance.maxSpillPerNode }}
+    query-max-spill-per-node={{ .Values.config.general.faultTolerance.queryMaxSpillPerNode }}
+    spill-compression-enabled={{ .Values.config.general.faultTolerance.spillCompressionEnabled }}
 {{ .Values.config.coordinator.extraConfig | indent 4 }}
 
   log.properties: |
